@@ -1,6 +1,6 @@
-# μHD-PID Live
+# μHDBD-PID Live
 
-μHD-PID Live is a PyQt5-based application designed to capture and record live video feeds from system cameras, while performing real-time analysis on the visual data. It includes a graphical user interface that displays both the live video feed and a histogram representing the pixel intensity distribution, enabling insightful analysis of captured frames.
+μHDBD-PID Live is a PyQt5-based application designed to capture and record live video feeds from system cameras, while performing real-time analysis on the visual data. It includes a graphical user interface that displays both the live video feed and a histogram representing the pixel intensity distribution, enabling insightful analysis of captured frames.
 
 ## Features
 - **Live Camera Feed**: View real-time camera feed with an option to switch between multiple connected cameras.
@@ -12,16 +12,16 @@
 ## Project Structure
 The project consists of three main Python files:
 
-1. **MatplotlibWidget.py**
+1. **ui/MatplotlibWidget.py**
    - Contains the `MyMplCanvas` class, which defines a custom Matplotlib canvas for displaying the histogram.
    - Includes the `MatplotlibWidget` class, which integrates the histogram into the main PyQt5 application.
 
-2. **GUI.py**
+2. **ui/GUI.py**
    - Defines the main user interface (`Ui_MainWindow`) for the application, with sections for both the histogram and camera display.
    - Contains buttons for camera control (e.g., switching cameras, pausing the feed, recording, and capturing).
 
 3. **main.py**
-   - The main entry point for the application.
+   - The main entry point for the application, located in the project root directory.
    - Contains the `YLVP` class that extends `QMainWindow` and provides the core functionality, such as camera setup, live video display, histogram updating, image capture, and video recording.
    - Initializes the PyQt5 event loop to run the application.
 
@@ -53,13 +53,16 @@ python main.py
 - **Results/**: Directory where captured images and recorded videos are saved.
   - **Captures/**: Stores captured images.
   - **Videos/**: Stores recorded videos, along with associated brightness plots and CSV data files.
+- **ui/**: Directory containing the user interface components.
+  - **MatplotlibWidget.py**: Contains the histogram canvas classes.
+  - **GUI.py**: Contains the main GUI definition.
 
 ## System Requirements
 - **Operating System**: Windows, macOS, or Linux
 - **Python Version**: Python 3.8 or higher
 - **Hardware**: A webcam or any compatible camera for capturing video
 
-## Screenshot
+## Screenshots
 ![Application Screenshot](demo/screenshot.png)
 
 ## Author
